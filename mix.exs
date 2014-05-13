@@ -1,10 +1,10 @@
-defmodule Exml.Mixfile do
+defmodule Exmerl.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :exml,
+    [app: :exmerl,
      version: "0.0.1",
-     elixir: "~> 0.13.3-dev",
+     elixir: "~> 0.13.2",
      deps: deps]
   end
 
