@@ -3,7 +3,7 @@ defmodule Exmerl.Mixfile do
 
   def project do
     [app: :exmerl,
-     version: "0.0.1",
+     version: "0.1.0",
      elixir: "~> 0.13.2",
      deps: deps]
   end
