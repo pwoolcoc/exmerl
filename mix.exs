@@ -5,26 +5,24 @@ defmodule Exmerl.Mixfile do
     [app: :exmerl,
      version: "0.1.0",
      elixir: "~> 0.13.2",
-     deps: deps]
+     deps: [],
+     package: package,
+     description: description
+    ]
   end
 
-  # Configuration for the OTP application
-  #
-  # Type `mix help compile.app` for more information
-  def application do
-    [applications: []]
+  defp package do
+    [
+      files: ["lib", "Makefile", "mix.exs", "README.md"],
+      contributors: ["Paul Woolcock"],
+      licenses: ["Apache 2.0"],
+      links: %{ "GitHub" => "https://github.com/pwoolcoc/exmerl" }
+    ]
   end
 
-  # Dependencies can be hex.pm packages:
-  #
-  #   {:mydep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1"}
-  #
-  # Type `mix help deps` for more examples and options
-  defp deps do
-    []
+  defp description do
+    """
+    An Elixir wrapper for the xmerl_* suite of modules
+    """
   end
 end
