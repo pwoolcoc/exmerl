@@ -26,7 +26,7 @@ defmodule Exmerl.XPath do
   @typedoc "xpath result"
   @type xpath_result :: term
 
-  @doc ~s"""
+  @doc """
   Select one or more XML elements using an XPath expression
 
   An alternate form of this allows `{document, rest}` to be passed in

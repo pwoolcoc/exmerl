@@ -19,7 +19,7 @@ defmodule Exmerl do
   @typedoc "values for option lists"
   @type value :: term
 
-  @doc ~s"""
+  @doc """
   Parses xml from a file. See http://www.erlang.org/doc/man/xmerl_scan.html
   for a description of the available options
   """
@@ -28,7 +28,7 @@ defmodule Exmerl do
     :xmerl_scan.file(fname, opts)
   end
 
-  @doc ~s"""
+  @doc """
   Parses xml from a string. See http://www.erlang.org/doc/man/xmerl_scan.html
   for a description of the available options
   """
@@ -37,7 +37,7 @@ defmodule Exmerl do
     :xmerl_scan.string(to_char_list(str), opts)
   end
 
-  @doc ~s"""
+  @doc """
   Tries to guess wether the first argument is a filename or not, and calls the
   appropriate function. See http://www.erlang.org/doc/man/xmerl_scan.html
   for a description of the available options
