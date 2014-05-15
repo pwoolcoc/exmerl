@@ -19,7 +19,11 @@ compile: $(TARGET)
 $(DOCS)/index.html: $(TARGET)
 	ex_doc $(MODULE_NAME) "0.1" $(shell dirname $(TARGET)) -m $(MODULE_NAME) -u "https://github.com/pwoolcoc/Exmerl"
 
-docs: $(DOCS)/index.html
+docs: $(DOCS)/index.html $(EXDOC)
+
+$(EXDOC):
+	@ echo "ex_doc was not found on your path. Please install ex_doc from https://github.com/elixir-lang/ex_doc and make sure the executable is on your path
+	@ false
 
 serve: docs
 	cd $(DOCS) && python -m SimpleHTTPServer
