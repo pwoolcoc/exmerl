@@ -1,5 +1,5 @@
 defmodule Exmerl.XPath do
-  @moduledoc ~s"""
+  @moduledoc """
   Select xml elements by an XPath selector
 
   Currently only provides one function, `find/2,3,5`
@@ -56,7 +56,7 @@ defmodule Exmerl.XPath do
     :xmerl_xpath.string(to_char_list(str), doc, opts)
   end
 
-  @doc ~s"""
+  @doc """
   Same as http://www.erlang.org/doc/man/xmerl_xpath.html#string-5,
   except for rearranging of the function parameters to allow piping.
   """
