@@ -22,7 +22,7 @@ defmodule Exmerl.Mixfile do
 
   defp description do
     """
-    An Elixir wrapper for the xmerl_* suite of modules
+    An Elixir wrapper for parsing XML through the xmerl_* suite of modules
     """
   end
 end
