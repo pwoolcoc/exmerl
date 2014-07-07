@@ -34,7 +34,7 @@ defmodule Exmerl do
   """
   @spec from_string(String.t, [{key, value}]) :: {document, rest}
   def from_string(str, opts \\ []) do
-    :xmerl_scan.string(to_char_list(str), opts)
+    :binary.bin_to_list(str) |> :xmerl_scan.string(opts)
   end
 
   @doc """
