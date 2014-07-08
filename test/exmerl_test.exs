@@ -33,4 +33,10 @@ defmodule ExmerlTest do
     {document, _} = Exmerl.parse(doc)
     assert document == result("", char_list: true)
   end
+
+  test "non-ASCII characters" do
+    doc = "<?xml version=\"1.0\" encoding=\"utf-8\"?><rootnode><childnode with=\"non-ascii-čharacters\"></childnode></rootnode>"
+    {document, _} = Exmerl.from_string(doc)
+    assert elem(document, 0) == :xmlElement
+  end
 end

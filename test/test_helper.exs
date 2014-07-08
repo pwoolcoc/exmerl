@@ -45,7 +45,9 @@ defmodule TestHelpers do
             [], :undefined, :undeclared},
         {:xmlText, [root: 1], 5, [], '\n  ', :text},
         {:xmlElement, :slfclsng, :slfclsng, [], {:xmlNamespace, [], []}, [root: 1], 6, [], [], [], :undefined, :undeclared},
-        {:xmlText, [root: 1], 7, [], '\n', :text}
+        {:xmlText, [root: 1], 7, [], '\n  ', :text},
+        {:xmlElement, :node, :node, [], {:xmlNamespace, [], []}, [root: 1], 8, [{:xmlAttribute, :wth, [], [], [], [node: 8, root: 1], 1, [], [110, 111, 110, 97, 115, 99, 105, 105, 45, 269, 104, 97, 114, 97, 99, 116, 101, 114, 115], false}], [], [], :undefined, :undeclared},
+        {:xmlText, [root: 1], 9, [], '\n', :text}
       ],
       [], loc, :undeclared}
   end

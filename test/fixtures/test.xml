@@ -3,4 +3,5 @@
   <node-one>Some Text</node-one>
   <node-two name="blah">HI</node-two>
   <slfclsng />
+  <node wth="nonascii-čharacters"></node>
 </root>
