@@ -6,7 +6,7 @@ defmodule PathHelpers do
   end
 
   def fixture_path(extra) do
-    Path.join(fixture_path, extra)
+    Path.join(fixture_path(), extra)
   end
 end
 
@@ -25,8 +25,10 @@ defmodule TestHelpers do
 
   def result(suffix, opts) do
     loc = Path.dirname(__DIR__) <> suffix
-    if Keyword.get(opts, :char_list, false) do
-      loc = to_char_list loc
+    loc = if Keyword.get(opts, :char_list, false) do
+      to_char_list loc
+    else
+      loc
     end
     {
       :xmlElement, :root, :root, [], { :xmlNamespace, [], [] }, [], 1, [],

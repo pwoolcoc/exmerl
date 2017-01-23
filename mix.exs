@@ -6,8 +6,8 @@ defmodule Exmerl.Mixfile do
      version: "0.1.1",
      elixir: ">= 0.13.2",
      deps: [],
-     package: package,
-     description: description
+     package: package(),
+     description: description()
     ]
   end
 
